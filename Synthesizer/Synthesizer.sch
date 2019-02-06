@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Synthesizer-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -38,44 +39,20 @@ $EndComp
 $Comp
 L Device:R_POT GLIDE
 U 1 1 5C54647D
-P 1250 5600
-F 0 "GLIDE" H 1180 5646 50  0000 R CNN
-F 1 "R_POT" H 1180 5555 50  0000 R CNN
-F 2 "" H 1250 5600 50  0001 C CNN
-F 3 "~" H 1250 5600 50  0001 C CNN
-	1    1250 5600
+P 1400 5600
+F 0 "GLIDE" H 1330 5646 50  0000 R CNN
+F 1 "R_POT" H 1330 5555 50  0000 R CNN
+F 2 "" H 1400 5600 50  0001 C CNN
+F 3 "~" H 1400 5600 50  0001 C CNN
+	1    1400 5600
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1100 5600 800  5600
-Wire Wire Line
-	800  5600 800  4450
-Wire Wire Line
-	800  4450 900  4450
-Wire Wire Line
-	2900 2050 3150 2050
-Wire Wire Line
-	3150 2050 3150 5350
-Wire Wire Line
-	3150 5350 1250 5350
-Wire Wire Line
-	1250 5350 1250 5450
 Wire Wire Line
 	900  950  750  950 
 Wire Wire Line
 	750  950  750  600 
 Wire Wire Line
 	750  600  3200 600 
-Wire Wire Line
-	3200 600  3200 5750
-Wire Wire Line
-	3200 5750 1250 5750
-Wire Wire Line
-	900  4550 650  4550
-Wire Wire Line
-	650  4550 650  6150
-Wire Wire Line
-	650  6150 750  6150
 $Comp
 L Device:R R3
 U 1 1 5C546DCA
@@ -94,8 +71,6 @@ Wire Wire Line
 Connection ~ 750  6600
 Wire Wire Line
 	750  6600 750  6350
-Text Label 1350 6250 0    50   ~ 0
-5VOut
 $Comp
 L power:GND #PWR?
 U 1 1 5C547323
@@ -376,4 +351,42 @@ Wire Wire Line
 Wire Wire Line
 	7850 750  7850 800 
 Connection ~ 7850 800 
+Text Label 550  4450 0    50   ~ 0
+GLIDE_IN
+Text Label 700  4550 0    50   ~ 0
+NOTE
+Wire Wire Line
+	900  4550 700  4550
+Wire Wire Line
+	900  4450 550  4450
+Text Label 1400 5400 0    50   ~ 0
+3.3V
+Wire Wire Line
+	1400 5450 1400 5400
+$Comp
+L power:GND #PWR?
+U 1 1 5C5B4A50
+P 1400 5850
+F 0 "#PWR?" H 1400 5600 50  0001 C CNN
+F 1 "GND" H 1405 5677 50  0000 C CNN
+F 2 "" H 1400 5850 50  0001 C CNN
+F 3 "" H 1400 5850 50  0001 C CNN
+	1    1400 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 5750 1400 5850
+Text Label 850  5600 0    50   ~ 0
+GLIDE_IN
+Wire Wire Line
+	850  5600 1250 5600
+Text Label 550  6150 0    50   ~ 0
+NOTE
+Wire Wire Line
+	550  6150 750  6150
+Text Label 1800 6250 0    50   ~ 0
+NOTE_TO_VCO
+Wire Wire Line
+	1800 6250 1650 6250
+Connection ~ 1650 6250
 $EndSCHEMATC
