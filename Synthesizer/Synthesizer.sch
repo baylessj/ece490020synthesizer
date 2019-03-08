@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L teensy:Teensy3.6 U2
+L Synthesizer-rescue:Teensy3.6-teensy U2
 U 1 1 5C545E1F
 P 1900 3050
 F 0 "U2" H 1900 5437 60  0000 C CNN
@@ -278,7 +278,7 @@ Wire Wire Line
 Wire Wire Line
 	9300 800  8900 800 
 Wire Wire Line
-	7100 750  7850 750 
+	7100 750  7250 750 
 Wire Wire Line
 	7850 750  7850 800 
 Connection ~ 7850 800 
@@ -337,31 +337,25 @@ $EndComp
 $Comp
 L Connector:Conn_01x02_Male FUZZ_IN1
 U 1 1 5C6DAD71
-P 6750 1250
-F 0 "FUZZ_IN1" H 6856 1428 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 6856 1337 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 6750 1250 50  0001 C CNN
-F 3 "~" H 6750 1250 50  0001 C CNN
-	1    6750 1250
+P 6100 1250
+F 0 "FUZZ_IN1" H 6206 1428 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 6206 1337 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 6100 1250 50  0001 C CNN
+F 3 "~" H 6100 1250 50  0001 C CNN
+	1    6100 1250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6950 1350 7150 1350
 $Comp
 L power:GND #PWR0102
 U 1 1 5C6DD678
-P 7000 1550
-F 0 "#PWR0102" H 7000 1300 50  0001 C CNN
-F 1 "GND" H 7005 1377 50  0000 C CNN
-F 2 "" H 7000 1550 50  0001 C CNN
-F 3 "" H 7000 1550 50  0001 C CNN
-	1    7000 1550
+P 6400 1550
+F 0 "#PWR0102" H 6400 1300 50  0001 C CNN
+F 1 "GND" H 6405 1377 50  0000 C CNN
+F 2 "" H 6400 1550 50  0001 C CNN
+F 3 "" H 6400 1550 50  0001 C CNN
+	1    6400 1550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7000 1550 7000 1250
-Wire Wire Line
-	7000 1250 6950 1250
 $Comp
 L Connector:Conn_01x02_Male FUZZ_OUT1
 U 1 1 5C6DE909
@@ -411,4 +405,52 @@ Wire Wire Line
 	1400 5550 1400 5600
 Wire Wire Line
 	850  5600 1400 5600
+$Comp
+L Amplifier_Operational:TL071 U3
+U 1 1 5C8282EB
+P 6800 1350
+F 0 "U3" H 7141 1396 50  0000 L CNN
+F 1 "TL071" H 7141 1305 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6850 1400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6950 1500 50  0001 C CNN
+	1    6800 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 1550 6400 1250
+Wire Wire Line
+	6400 1250 6300 1250
+Wire Wire Line
+	6300 1350 6500 1350
+Wire Wire Line
+	6500 1350 6500 1250
+Wire Wire Line
+	7100 1350 7150 1350
+Wire Wire Line
+	7100 1350 7100 1800
+Wire Wire Line
+	7100 1800 6500 1800
+Wire Wire Line
+	6500 1800 6500 1450
+Connection ~ 7100 1350
+$Comp
+L power:GND #PWR0103
+U 1 1 5C82AD33
+P 6700 1850
+F 0 "#PWR0103" H 6700 1600 50  0001 C CNN
+F 1 "GND" H 6705 1677 50  0000 C CNN
+F 2 "" H 6700 1850 50  0001 C CNN
+F 3 "" H 6700 1850 50  0001 C CNN
+	1    6700 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 1850 6700 1650
+Wire Wire Line
+	6700 1050 7250 1050
+Wire Wire Line
+	7250 1050 7250 750 
+Connection ~ 7250 750 
+Wire Wire Line
+	7250 750  7850 750 
 $EndSCHEMATC
