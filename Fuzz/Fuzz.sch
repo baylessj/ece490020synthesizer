@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Synthesizer-cache
+LIBS:Fuzz-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -37,17 +37,6 @@ F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 7300 1350 50  0001 C CNN
 F 3 "~" H 7300 1350 50  0001 C CNN
 	1    7300 1350
 	0    1    1    0   
-$EndComp
-$Comp
-L power:+9V #PWR04
-U 1 1 5C54984C
-P 7100 750
-F 0 "#PWR04" H 7100 600 50  0001 C CNN
-F 1 "+9V" H 7115 923 50  0000 C CNN
-F 2 "" H 7100 750 50  0001 C CNN
-F 3 "" H 7100 750 50  0001 C CNN
-	1    7100 750 
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R4
@@ -317,4 +306,28 @@ Wire Wire Line
 Connection ~ 7250 750 
 Wire Wire Line
 	7250 750  7850 750 
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5C9241B5
+P 6900 750
+F 0 "J1" H 7006 928 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 7006 837 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1mm" H 6900 750 50  0001 C CNN
+F 3 "~" H 6900 750 50  0001 C CNN
+	1    6900 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5C924276
+P 7100 950
+F 0 "#PWR0101" H 7100 700 50  0001 C CNN
+F 1 "GND" H 7105 777 50  0000 C CNN
+F 2 "" H 7100 950 50  0001 C CNN
+F 3 "" H 7100 950 50  0001 C CNN
+	1    7100 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 950  7100 850 
 $EndSCHEMATC
